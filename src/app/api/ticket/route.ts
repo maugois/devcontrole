@@ -67,6 +67,4 @@ export async function POST(request: Request){
   }catch(err){
     return NextResponse.json({ error: "Failed create new ticket"}, { status: 400 });
   }
-
-
 }
