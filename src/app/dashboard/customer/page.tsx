@@ -4,7 +4,7 @@ import { getServerSession } from 'next-auth'
 import { redirect } from 'next/navigation'
 
 import Link from 'next/link'
-// import { CardCustomer } from './components/card'
+import { CardCustomer } from './components/card'
 import prismaClient from '@/lib/prisma'
 
 export default async function Customer() {
@@ -31,14 +31,14 @@ export default async function Customer() {
           </Link>
         </div>
 
-        {/* <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-2">
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-2">
           {customers.map(customer => (
             <CardCustomer
               key={customer.id}
               customer={customer}
             />
           ))}
-        </section> */}
+        </section>
 
         {customers.length === 0 && (
           <h1 className="text-gray-600">Você ainda não possui nenhum cliente.</h1>
